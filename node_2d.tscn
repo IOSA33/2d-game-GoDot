@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bmthmsjk3xbid"]
+
+[node name="Node2D" type="Node2D" unique_id=1793258256]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1719410203]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1551507260]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=455833826]
+format = 2

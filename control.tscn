@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://w4xmopiteqxk"]
+
+[ext_resource type="Script" uid="uid://ciclswwbr0qcp" path="res://src/Player/Player.cs" id="2_62e2m"]
+
+[node name="Control" type="Control" unique_id=1790707710]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_62e2m")
+
+[node name="PlayerInfo" type="Panel" parent="." unique_id=1980963549]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 18.0
+offset_right = 213.0
+offset_bottom = 74.0
+
+[node name="HP" type="Label" parent="PlayerInfo" unique_id=1770813607]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 79.0
+offset_top = 11.0
+offset_right = 167.0
+offset_bottom = 55.0
+pivot_offset = Vector2(-1, 2)
+theme_override_font_sizes/font_size = 25
+text = "[HP]"
+
+[node name="HpLabel" type="Label" parent="PlayerInfo" unique_id=463494568]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 68.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 25
+text = "HP: "
+
+[node name="CoinBox" type="Panel" parent="." unique_id=453975920]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 23.0
+offset_right = 1099.0
+offset_bottom = 95.0
+
+[node name="CoinsValueText" type="Label" parent="CoinBox" unique_id=1505307817]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 113.0
+offset_top = 16.0
+offset_right = 236.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 25
+text = "[Coins]"
+
+[node name="Label" type="Label" parent="CoinBox" unique_id=1779395197]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 15.0
+offset_right = 106.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 25
+text = "Coins: "
+
+[node name="GrantCoins" type="Button" parent="." unique_id=1249377094]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 265.0
+offset_top = 111.0
+offset_right = 503.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Get Coins"
+
+[node name="GetDamage" type="Button" parent="." unique_id=860768851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 223.0
+offset_top = 211.0
+offset_right = 528.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Get Damage"
+
+[connection signal="pressed" from="GrantCoins" to="." method="OnButtonPressedCoins"]
+[connection signal="pressed" from="GetDamage" to="." method="OnGetDamaged"]
