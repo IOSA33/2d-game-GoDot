@@ -37,5 +37,13 @@ public partial class NewScript : Node
 		SetHP(10);
     }
 
-	public virtual void SetHP(int newHp) {}
+	public virtual void SetHP(int newHp) {
+		GD.Print("base class");
+	}
+
+	public void OnPlayButtonPressed()
+	{
+		GetTree().ChangeSceneToFile("res://node_2d.tscn");
+
+	}
 }

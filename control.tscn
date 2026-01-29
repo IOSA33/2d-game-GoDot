@@ -4,11 +4,11 @@
 
 [node name="Control" type="Control" unique_id=1790707710]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.994
 offset_top = 4.0
-offset_bottom = 4.0
+offset_right = 2.0
+offset_bottom = 5.8880005
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_62e2m")
@@ -98,5 +98,15 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Get Damage"
 
+[node name="PlayButton" type="Button" parent="." unique_id=1835177631]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 453.0
+offset_right = 626.0
+offset_bottom = 559.0
+theme_override_font_sizes/font_size = 38
+text = "Start the Game :)"
+
 [connection signal="pressed" from="GrantCoins" to="." method="OnButtonPressedCoins"]
 [connection signal="pressed" from="GetDamage" to="." method="OnGetDamaged"]
+[connection signal="pressed" from="PlayButton" to="." method="OnPlayButtonPressed"]
