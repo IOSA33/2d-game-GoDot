@@ -34,6 +34,7 @@ public partial class PlayerControl : Control
 	public void setHp(int newHp) {
 		if ( health <= 0 ) {
 			GD.Print("No more health");
+			GetTree().ChangeSceneToFile("res://control.tscn");
 		} else { 
 			health -= newHp;
 			HP.Text = health.ToString();

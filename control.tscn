@@ -1,6 +1,37 @@
 [gd_scene format=3 uid="uid://w4xmopiteqxk"]
 
-[ext_resource type="Script" uid="uid://ciclswwbr0qcp" path="res://src/Player/Player.cs" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://djuetvg7gsmey" path="res://src/NewScript.cs" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://c333uihyk3j27" path="res://sdfklj.png" id="2_qtu10"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_62e2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0.8862745, 0.39607844, 0.6666667, 0.84313726)
+border_width_left = 13
+border_color = Color(0.57254905, 0.56078434, 0.8745098, 1)
+border_blend = true
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
+bg_color = Color(0.36078432, 0.3529412, 0.4862745, 0.7529412)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
+bg_color = Color(0.63498163, 0.57002234, 0.79100287, 0.6)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
 
 [node name="Control" type="Control" unique_id=1790707710]
 layout_mode = 3
@@ -11,102 +42,53 @@ offset_right = 2.0
 offset_bottom = 5.8880005
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_62e2m")
+script = ExtResource("1_62e2m")
 
-[node name="PlayerInfo" type="Panel" parent="." unique_id=1980963549]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1051439107]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground" unique_id=1484017818]
+position = Vector2(586.00006, 326)
+scale = Vector2(0.63225806, 0.6537718)
+texture = ExtResource("2_qtu10")
+
+[node name="Panel" type="Panel" parent="." unique_id=1117109124]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 18.0
-offset_right = 329.0
-offset_bottom = 74.0
+offset_left = 699.0
+offset_top = 62.0
+offset_right = 1053.0
+offset_bottom = 333.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kbped")
 
-[node name="HP" type="Label" parent="PlayerInfo" unique_id=1770813607]
-unique_name_in_owner = true
+[node name="PlayButton" type="Button" parent="Panel" unique_id=1835177631]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 8.0
-offset_right = 155.0
-offset_bottom = 46.0
-pivot_offset = Vector2(-1, 2)
-theme_override_font_sizes/font_size = 25
-text = "[HP]"
-
-[node name="HpLabel" type="Label" parent="PlayerInfo" unique_id=463494568]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 9.0
-offset_right = 68.0
-offset_bottom = 53.0
-theme_override_font_sizes/font_size = 25
-text = "HP: "
-
-[node name="CoinBox" type="Panel" parent="." unique_id=453975920]
-layout_mode = 0
-offset_left = 794.0
-offset_top = 18.0
-offset_right = 1061.0
-offset_bottom = 78.0
-
-[node name="CoinsValueText" type="Label" parent="CoinBox" unique_id=1505307817]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 108.0
-offset_top = 8.0
-offset_right = 231.0
-offset_bottom = 44.0
-theme_override_font_sizes/font_size = 25
-text = "[Coins]"
-
-[node name="Label" type="Label" parent="CoinBox" unique_id=1779395197]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 9.0
-offset_right = 93.0
-offset_bottom = 54.0
-theme_override_font_sizes/font_size = 25
-text = "Coins: "
-
-[node name="GrantCoins" type="Button" parent="." unique_id=1249377094]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 265.0
-offset_top = 111.0
-offset_right = 503.0
-offset_bottom = 188.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "Get Coins"
-
-[node name="GetDamage" type="Button" parent="." unique_id=860768851]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 223.0
-offset_top = 211.0
-offset_right = 528.0
-offset_bottom = 288.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "Get Damage"
-
-[node name="PlayButton" type="Button" parent="." unique_id=1835177631]
-layout_mode = 0
-offset_left = 288.0
-offset_top = 434.0
-offset_right = 638.0
-offset_bottom = 540.0
+offset_left = 70.0
+offset_top = 162.0
+offset_right = 266.0
+offset_bottom = 220.0
+theme_override_fonts/font = SubResource("FontVariation_62e2m")
 theme_override_font_sizes/font_size = 38
-text = "Start the Game :)"
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtu10")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ee4bf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_62e2m")
+text = "START
+"
 
-[connection signal="pressed" from="GrantCoins" to="." method="OnButtonPressedCoins"]
-[connection signal="pressed" from="GetDamage" to="." method="OnGetDamaged"]
-[connection signal="pressed" from="PlayButton" to="." method="OnPlayButtonPressed"]
+[node name="MainText" type="Label" parent="Panel" unique_id=1215098685]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 14.0
+offset_right = 346.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 59
+text = "STATICVOID"
+
+[node name="Label" type="Label" parent="Panel" unique_id=1228379673]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 97.0
+offset_right = 317.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 29
+text = "Avoid The Bad Masks"
+
+[connection signal="pressed" from="Panel/PlayButton" to="." method="OnPlayButtonPressed"]
