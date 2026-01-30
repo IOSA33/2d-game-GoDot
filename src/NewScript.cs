@@ -5,8 +5,7 @@ public partial class NewScript : Node
 {
 	Label CoinsValueText;
 	protected Label HP;
-	[Export]
-	public int playerHP { get; set; } = 100;
+	protected int playerHP = 100;
 	Label HPLabel;
 	int coinsValue = 0;
 

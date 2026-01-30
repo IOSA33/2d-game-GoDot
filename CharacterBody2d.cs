@@ -37,4 +37,12 @@ public partial class CharacterBody2d : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	public void _on_area_2d_area_entered(){
+		GD.Print("Entered");
+	}
+
+	public void _on_enemy_body_entered() {
+		GD.Print("Entered");
+	}
 }

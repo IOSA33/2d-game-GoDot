@@ -7,8 +7,7 @@ public partial class Player : NewScript
 	{
 		if (playerHP > 0)
 		{
-			GD.Print("inherit");
-			this.playerHP -= newHp;
+			playerHP -= newHp;
 			HP.Text = playerHP.ToString();
 		} else
 		{
