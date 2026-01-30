@@ -5,7 +5,9 @@ public partial class NewScript : Node
 {
 	Label CoinsValueText;
 	protected Label HP;
-	protected int playerHP = 100;
+	[Export]
+	public int playerHP { get; set; } = 100;
+	Label HPLabel;
 	int coinsValue = 0;
 
 	// Called when the node enters the scene tree for the first time.
@@ -32,10 +34,10 @@ public partial class NewScript : Node
 	}
 
 	public void OnGetDamaged()
-    {
-        GD.Print("called!");
+	{
+		GD.Print("called!");
 		SetHP(10);
-    }
+	}
 
 	public virtual void SetHP(int newHp) {
 		GD.Print("base class");
@@ -44,6 +46,5 @@ public partial class NewScript : Node
 	public void OnPlayButtonPressed()
 	{
 		GetTree().ChangeSceneToFile("res://node_2d.tscn");
-
 	}
 }
