@@ -38,11 +38,16 @@ public partial class CharacterBody2d : CharacterBody2D
 		MoveAndSlide();
 	}
 
-	public void _on_area_2d_area_entered(){
-		GD.Print("Entered");
-	}
-
-	public void _on_enemy_body_entered() {
-		GD.Print("Entered");
+	public void _on_area_2d_area_entered(Area2D area){
+		GD.Print("Entered: " + area.Name);	
+		var playCtrl = GetTree().Root.FindChild("Control", true, false) as PlayerControl;
+		if (playCtrl != null)
+		{
+			playCtrl.setHp(10);
+			if (playCtrl.getHp() <= 0)
+			{
+				GetTree().ChangeSceneToFile("res://control.tscn");
+			}
+		}
 	}
 }

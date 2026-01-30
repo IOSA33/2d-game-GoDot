@@ -17,16 +17,16 @@ script = ExtResource("2_62e2m")
 layout_mode = 0
 offset_left = 27.0
 offset_top = 18.0
-offset_right = 213.0
+offset_right = 329.0
 offset_bottom = 74.0
 
 [node name="HP" type="Label" parent="PlayerInfo" unique_id=1770813607]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 79.0
-offset_top = 11.0
-offset_right = 167.0
-offset_bottom = 55.0
+offset_left = 67.0
+offset_top = 8.0
+offset_right = 155.0
+offset_bottom = 46.0
 pivot_offset = Vector2(-1, 2)
 theme_override_font_sizes/font_size = 25
 text = "[HP]"
@@ -42,27 +42,27 @@ text = "HP: "
 
 [node name="CoinBox" type="Panel" parent="." unique_id=453975920]
 layout_mode = 0
-offset_left = 832.0
-offset_top = 23.0
-offset_right = 1099.0
-offset_bottom = 95.0
+offset_left = 794.0
+offset_top = 18.0
+offset_right = 1061.0
+offset_bottom = 78.0
 
 [node name="CoinsValueText" type="Label" parent="CoinBox" unique_id=1505307817]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 113.0
-offset_top = 16.0
-offset_right = 236.0
-offset_bottom = 52.0
+offset_left = 108.0
+offset_top = 8.0
+offset_right = 231.0
+offset_bottom = 44.0
 theme_override_font_sizes/font_size = 25
 text = "[Coins]"
 
 [node name="Label" type="Label" parent="CoinBox" unique_id=1779395197]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 15.0
-offset_right = 106.0
-offset_bottom = 60.0
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 93.0
+offset_bottom = 54.0
 theme_override_font_sizes/font_size = 25
 text = "Coins: "
 

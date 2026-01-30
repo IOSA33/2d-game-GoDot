@@ -5,6 +5,8 @@ public partial class PlayerControl : Control
 {
 	Label HP;
 
+	int currentSrore = 0;
+
 	int health = 100;
 
 	// Called when the node enters the scene tree for the first time.
@@ -40,13 +42,5 @@ public partial class PlayerControl : Control
 
 	public int getHp() {
 		return health;
-	}
-
-	public void _on_body_entered() {
-		GD.Print("enee1");
-	}
-
-	public void _on_area_2d_area_entered(){
-		GD.Print("Entered");
 	}
 }

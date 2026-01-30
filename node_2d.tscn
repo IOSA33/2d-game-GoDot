@@ -9,7 +9,7 @@
 size = Vector2(48.5, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
-size = Vector2(132.625, 118.6875)
+size = Vector2(50, 42)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
 texture = ExtResource("2_epypp")
@@ -30,10 +30,10 @@ sources/1 = SubResource("TileSetAtlasSource_0hol4")
 size = Vector2(1260.9375, 40.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(60.5, 84.5)
+size = Vector2(54.25, 68.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
-size = Vector2(87, 202)
+size = Vector2(87.125, 91.25)
 
 [node name="Node2D" type="Node2D" unique_id=1793258256]
 
@@ -46,14 +46,14 @@ scale = Vector2(0.10810813, 0.08530402)
 texture = ExtResource("1_0e48y")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1566075870]
-position = Vector2(-122, -298)
+position = Vector2(0, -38)
 shape = SubResource("RectangleShape2D_0e48y")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1551507260]
-zoom = Vector2(1.5, 1.5)
-limit_left = -711
+zoom = Vector2(1.2, 1.2)
+limit_left = -820
 limit_top = -9999713
-limit_right = 677
+limit_right = 820
 limit_bottom = 10000287
 limit_smoothed = true
 
@@ -92,7 +92,7 @@ text = "100"
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=1748032113]
 
 [node name="area" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=1575742762]
-position = Vector2(3, -74)
+position = Vector2(0, -38)
 shape = SubResource("RectangleShape2D_q6r6c")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=988233616]
@@ -106,22 +106,21 @@ position = Vector2(-23.46875, 23)
 shape = SubResource("RectangleShape2D_epypp")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=717311543]
-position = Vector2(-288, -88)
+position = Vector2(-288, -87)
 shape = SubResource("RectangleShape2D_0hol4")
 
 [node name="changeLvl" type="Button" parent="StaticBody2D" unique_id=1639107111]
-offset_left = -244.0
-offset_top = -101.0
-offset_right = -171.0
-offset_bottom = -70.0
+offset_left = -230.0
+offset_top = -124.0
+offset_right = -157.0
+offset_bottom = -93.0
 text = "Click me"
 
-[node name="enemy" type="Area2D" parent="." unique_id=879304026]
+[node name="enemy" type="Area2D" parent="StaticBody2D" unique_id=879304026]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=2144569088]
-position = Vector2(10, 95)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/enemy" unique_id=2144569088]
+position = Vector2(-288, -88)
 shape = SubResource("RectangleShape2D_kdubu")
 
 [connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="StaticBody2D/changeLvl" to="CharacterBody2D/Control" method="_on_change_lvl_pressed"]
-[connection signal="body_entered" from="enemy" to="enemy" method="_on_body_entered"]
