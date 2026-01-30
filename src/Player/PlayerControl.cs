@@ -9,6 +9,11 @@ public partial class PlayerControl : Control
 
 	int health = 100;
 
+	private void ChangeSceneDeferred()
+	{
+		GetTree().ChangeSceneToFile("res://control.tscn");
+	}
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -26,7 +31,7 @@ public partial class PlayerControl : Control
 		setHp(20);
 		GD.Print(health);
 		if (health <= 0) {
-			GetTree().ChangeSceneToFile("res://control.tscn");
+			CallDeferred(nameof(ChangeSceneDeferred));
 			GD.Print("You lost!");
 		}
 	}
@@ -34,7 +39,7 @@ public partial class PlayerControl : Control
 	public void setHp(int newHp) {
 		if ( health <= 0 ) {
 			GD.Print("No more health");
-			GetTree().ChangeSceneToFile("res://control.tscn");
+			CallDeferred(nameof(ChangeSceneDeferred));
 		} else { 
 			health -= newHp;
 			HP.Text = health.ToString();
@@ -44,4 +49,6 @@ public partial class PlayerControl : Control
 	public int getHp() {
 		return health;
 	}
+
+
 }

@@ -6,6 +6,11 @@ public partial class CharacterBody2d : CharacterBody2D
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -600.0f;
 
+	private void ChangeSceneDeferred()
+	{
+		GetTree().ChangeSceneToFile("res://control.tscn");
+	}
+
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
@@ -46,7 +51,7 @@ public partial class CharacterBody2d : CharacterBody2D
 			playCtrl.setHp(10);
 			if (playCtrl.getHp() <= 0)
 			{
-				GetTree().ChangeSceneToFile("res://control.tscn");
+				CallDeferred(nameof(ChangeSceneDeferred));
 			}
 		}
 	}
@@ -55,12 +60,12 @@ public partial class CharacterBody2d : CharacterBody2D
 	public void OnVoidEntered(Area2D area) {
 		GD.Print("Entered: " + area.Name);
 		GD.Print("You Lost! Jumped in the void!");
-		GetTree().ChangeSceneToFile("res://control.tscn");
+		CallDeferred(nameof(ChangeSceneDeferred));
 	}
 
 	public void OnWinningAreaEntered(Area2D area) {
 		GD.Print("Entered: " + area.Name);
 		GD.Print("You Won the Game and Collected in total: ");
-		GetTree().ChangeSceneToFile("res://control.tscn");
+		CallDeferred(nameof(ChangeSceneDeferred));
 	}
 }

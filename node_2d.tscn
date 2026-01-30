@@ -62,7 +62,7 @@ size = Vector2(1260.9375, 45)
 size = Vector2(43.65625, 26.46875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
-size = Vector2(44.78125, 41.3125)
+size = Vector2(21.847656, 17.664063)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(1262, 411)
@@ -159,14 +159,14 @@ text = "Click me"
 [node name="testcol" type="Area2D" parent="StaticBody2D" unique_id=879304026]
 
 [node name="winningArea" type="CollisionShape2D" parent="StaticBody2D/testcol" unique_id=2144569088]
-position = Vector2(-224, -732)
+position = Vector2(-224, -712)
 shape = SubResource("RectangleShape2D_kdubu")
 
 [node name="Label" type="Label" parent="StaticBody2D/testcol/winningArea" unique_id=1751998937]
-offset_left = -39.0
-offset_top = -16.0
-offset_right = 43.0
-offset_bottom = 17.0
+offset_left = -38.0
+offset_top = -30.0
+offset_right = 44.0
+offset_bottom = 1.0
 theme_override_colors/font_color = Color(1, 0.2, 0.49803922, 1)
 theme_override_colors/font_shadow_color = Color(0.5647059, 0, 0, 1)
 theme_override_font_sizes/font_size = 22
