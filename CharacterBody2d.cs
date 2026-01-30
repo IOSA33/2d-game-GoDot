@@ -50,4 +50,17 @@ public partial class CharacterBody2d : CharacterBody2D
 			}
 		}
 	}
+
+
+	public void OnVoidEntered(Area2D area) {
+		GD.Print("Entered: " + area.Name);
+		GD.Print("You Lost! Jumped in the void!");
+		GetTree().ChangeSceneToFile("res://control.tscn");
+	}
+
+	public void OnWinningAreaEntered(Area2D area) {
+		GD.Print("Entered: " + area.Name);
+		GD.Print("You Won the Game and Collected in total: ");
+		GetTree().ChangeSceneToFile("res://control.tscn");
+	}
 }
