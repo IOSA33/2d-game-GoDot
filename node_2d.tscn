@@ -14,7 +14,7 @@
 size = Vector2(41.625, 55.75)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4d7sh"]
-bg_color = Color(0.2, 0.38431373, 0.5176471, 0.8666667)
+bg_color = Color(0.42352942, 0.2, 0.22745098, 0.8666667)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -120,6 +120,7 @@ script = ExtResource("3_0hol4")
 
 [node name="CurrentHp" type="Panel" parent="CharacterBody2D/Control" unique_id=2085504133]
 layout_mode = 0
+offset_left = -8.0
 offset_right = 56.0
 offset_bottom = 24.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4d7sh")
@@ -127,8 +128,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4d7sh")
 [node name="HP" type="Label" parent="CharacterBody2D/Control/CurrentHp" unique_id=558530964]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 24.0
-offset_right = 54.0
+offset_left = 32.0
+offset_right = 62.0
 offset_bottom = 24.0
 theme_override_colors/font_color = Color(1, 0.96862745, 1, 1)
 theme_override_font_sizes/font_size = 17
@@ -136,9 +137,10 @@ text = "100"
 
 [node name="Label" type="Label" parent="CharacterBody2D/Control/CurrentHp" unique_id=79363925]
 layout_mode = 0
-offset_right = 27.0
+offset_left = 8.0
+offset_right = 35.0
 offset_bottom = 23.0
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 17
 text = "HP "
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=1748032113]
