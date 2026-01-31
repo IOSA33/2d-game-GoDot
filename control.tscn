@@ -89,6 +89,6 @@ offset_top = 97.0
 offset_right = 317.0
 offset_bottom = 137.0
 theme_override_font_sizes/font_size = 29
-text = "Avoid The Bad Masks"
+text = "Collect The Bad Masks"
 
 [connection signal="pressed" from="Panel/PlayButton" to="." method="OnPlayButtonPressed"]

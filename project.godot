@@ -22,6 +22,10 @@ Bgmusic="*uid://bivdbanpjn8rf"
 
 project/assembly_name="cshaprttest"
 
+[global_group]
+
+player=""
+
 [input]
 
 left={
